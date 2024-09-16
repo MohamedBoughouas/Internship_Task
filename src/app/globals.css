@@ -1,0 +1,164 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25); /* Semi-transparent background */
+  z-index: 999; /* Behind the alert but above everything else */
+  display: none; /* Initially hidden */
+}
+
+.overlay.show {
+  display: block;
+}
+.alertBox p {
+  font-size: 27px;
+}
+.alertBox {
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: rgba(250, 104, 50);
+  color: white;
+  padding: 25px;
+  padding-top: 40px;
+  border-radius: 12px;
+
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  z-index: 1000; /* On top of the overlay */
+  text-align: center;
+  opacity: 0.9;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  max-width: 350px;
+  width: 20%;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.alertBox.show {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 1;
+}
+
+.alertBox.hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.add {
+  margin-top: 20px;
+  background-color: rgba(250, 104, 50);
+  color: white;
+  font-size: 16px;
+  border: solid rgba(250, 104, 50) 1px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px black;
+  padding: 13px 15.5px;
+  font-weight: bold;
+  float: right;
+}
+.add:hover {
+  cursor: grab;
+  border: solid rgba(250, 104, 50) 2px;
+  background-color: white;
+  color: rgba(250, 104, 50);
+}
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner-container p {
+  font-size: 20px;
+}
+/* Style the Froala toolbar background */
+.fr-toolbar {
+  background-color: rgba(255, 114, 6, 0.25); /* Change toolbar background */
+  border-radius: 8px; /* Add rounded corners */
+  position: relative;
+}
+
+/* Style selected text (highlighted) */
+.fr-view ::selection {
+  background-color: #e74c3c; /* Custom highlight color */
+  color: white;
+}
+
+/* Style the border of the editor */
+.fr-box {
+  border: 2px solid #e74c3c; /* Change border color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: none;
+}
+
+/* Set the max-height for the content area inside the editor */
+.fr-view {
+  height: 305px;
+  padding: 25px;
+  padding-top: 0;
+  /* overflow-y: scroll; Enable scrolling within the content */
+}
+/* .fr-box {
+  /* Add scrolling when content exceeds max height 
+} */
+
+.editorContainer {
+  width: 95%;
+  margin-left: 2.5%;
+  /* justify-content: center; */
+}
+
+* {
+  font-family: Inter, sans-serif;
+}
+
+/* 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
